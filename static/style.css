@@ -1,0 +1,77 @@
+/* style.css */
+
+@font-face {
+    font-family: 'Reem Kufi';
+    src: url('{{ url_for('static', filename='reem-kufi.ttf') }}') format('truetype');
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2ece6; /* Light gray background color */
+}
+
+#wrapper {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    background-color: #f0f0f0; /* White background color for the wrapper */
+    padding: 20px; /* Padding around the wrapper */
+    border-radius: 15px; /* Border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for the wrapper */
+    max-width: 80%; /* Limit the width to 80% of the screen */
+}
+
+#logo {
+    max-width: 100%; /* Ensure the logo doesn't exceed its original size */
+    height: auto; /* Maintain the aspect ratio while scaling */
+    margin-bottom: 10px; /* Add some margin between the logo and the canvas */
+}
+
+#container {
+    text-align: center;
+}
+
+#drawCanvas {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow to the bottom right */
+}
+
+#buttonsContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.actionButton {
+    font-family: 'Reem Kufi', sans-serif;
+    flex: 1; /* Use flex property to share available space equally */
+    max-width: 150px;
+    padding: 5px; /* Adjust padding as needed */
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow to the bottom right */
+    transition: transform 0.3s ease;
+}
+
+.actionButton:hover {
+    transform: scale(1.1); /* Scale the button on hover */
+}
+
+#submitBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#clearBtn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}

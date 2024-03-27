@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Canvas App</title>
+</head>
+<body>
+    <div id="wrapper">
+        <img id="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo" style="width: 25%;">
+        <div id="container">
+            <canvas id="drawCanvas" width="500" height="500"></canvas>
+            <div id="buttonsContainer">
+                <button id="submitBtn" class="actionButton">Submit</button>
+                <button id="clearBtn" class="actionButton">Clear Canvas</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
